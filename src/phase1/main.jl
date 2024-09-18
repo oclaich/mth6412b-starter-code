@@ -5,8 +5,10 @@ include("read_stsp.jl")
 
 
 function main(filename::String)
+    header = read_header(filename)
     graph_nodes, graph_edges = read_stsp(filename)
-    name = "My graph"
+    name =  header["NAME"]
     graph = Graph(name, graph_nodes, graph_edges)
-    return(graph)
+
+    println("Graph ",name, " created.")
 end
