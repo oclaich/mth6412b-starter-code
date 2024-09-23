@@ -1,0 +1,12 @@
+Projet MTH6412B - Rapport Claich Octave
+
+Phase 1
+Location du code dans la branche phase1 : src/phase1
+
+Création du type Edge
+Prise en compte des edges par la structure Graph
+Prise en compte des poids des arêtes par le fonction read_edges
+Fonction main qui doit contenir le programme principal, mais questionnements sur comment le faire fonctionner : 
+  - doit-il renvoyer quelque chose ? 
+  - On suppose que l'argument de la fonction comporte des headers du même style que les exemples, ce qui permet d'attribuer un nom au graphe.
+
