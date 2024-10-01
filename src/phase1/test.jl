@@ -45,3 +45,27 @@ edges = Edge[edge1,edge2,edge3,edge4,edge5,edge6,edge7,edge8,edge9,edge10,edge11
 
 graph=Graph("Test graph",nodes,edges)
 
+@testset "Tests sur les structures de graphe." begin
+    @test node1.name == "A"
+    @test edge2.weight == 8
+    @test edge5.node1 == node5
+    @test edge12.node2 == node7
+
+    @test (graph.edges[1]).node1 == node1
+    @test nb_nodes(graph) == 9
+    @test nb_edges(graph) == 14
+end
+
+""" Tests à faire sur l'algorithme de Kruskal :
+    - Créer des composantes connexes (2) simples et les mettre dans une liste
+    - Appliquer la fonction check_comp_connexe à cette liste avec deux noeuds, et regarder si on a bien ce qu'on veut en sortie
+    - Faire un test sur l'algorithme de Kruskal appliqué au graph créé précedemment, qui doit renvoyer 37 comme poids."""
+@testset "Tests sur l'algorithme de Kruskal." begin
+    element1=ConnexeElement("element1",node1,node1)
+    element2=ConnexeElement("element2",node2,node2)
+    comp1=CompConnexe()
+    comp2=CompConnexe()
+    push!(comp1,element1)
+    
+
+end
