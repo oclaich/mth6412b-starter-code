@@ -1,4 +1,5 @@
 import Base.show
+include("node.jl")
 
 abstract type AbstractEdge{T} end
 

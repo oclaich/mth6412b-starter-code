@@ -63,9 +63,19 @@ end
 @testset "Tests sur l'algorithme de Kruskal." begin
     element1=ConnexeElement("element1",node1,node1)
     element2=ConnexeElement("element2",node2,node2)
+    element3=ConnexeElement("element2",node2,node3)
     comp1=CompConnexe()
     comp2=CompConnexe()
     push!(comp1,element1)
-    
+    push!(comp2,element2)
+    push!(comp2,element3)
+    comp_connexes=CompConnexe[]
+    push!(comp_connexes,comp1)
+    push!(comp_connexes,comp2)
+    c1,c2,l1,l2=check_comp_connexe(comp_connexes,node1,node3)
+    @test c1 == 1
+    @test c2 == 2
+    @test l1 == 1
+    @test l2 == 2
 
 end
