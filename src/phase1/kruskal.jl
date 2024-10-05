@@ -30,7 +30,8 @@ end
 
 """ Algorithme de Kruskal, qui doit renvoyer uniquement l'ensemble des arêtes et le poids total de l'arbre de recouvrement minimal. """
 
-function  kruskal(graph::Graph{T}) where {T}
+function  kruskal(filename::String) where {T}
+    graph=Graph(read_stsp(filename))
     """ Initialisation des listes et du poids total """
     used_edges = Edge[]
     comp_connexes=CompConnexe[]

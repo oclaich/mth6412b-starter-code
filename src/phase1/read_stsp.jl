@@ -16,7 +16,7 @@ function read_header(filename::String)
   for line in eachline(file)
     line = strip(line)
     data = split(line, ":")
-    if length(data) >= 2
+    if Base.length(data) >= 2
       firstword = strip(data[1])
       if firstword in sections
         header[firstword] = strip(data[2])
@@ -123,12 +123,12 @@ function read_edges(header::Dict{String}{String}, filename::String)
 
       if edge_weight_section
         data = split(line)
-        n_data = length(data)
+        n_data = Base.length(data)
         start = 0
         while n_data > 0
           n_on_this_line = min(n_to_read, n_data)
 
-          for j = start : start + n_on_this_line - 1
+          for j = start + 1: start + n_on_this_line - 1
 
             weight = parse(Float64, data[j])
             n_edges = n_edges + 1
@@ -218,7 +218,7 @@ function plot_graph(nodes, edges)
   fig = plot(legend=false)
 
   # edge positions
-  for k = 1 : length(edges)
+  for k = 1 : Base.length(edges)
     for j in edges[k]
       plot!([nodes[k][1], nodes[j][1]], [nodes[k][2], nodes[j][2]],
           linewidth=1.5, alpha=0.75, color=:lightgray)
