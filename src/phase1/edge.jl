@@ -6,7 +6,7 @@ abstract type AbstractEdge{T} end
 mutable struct Edge{T} <: AbstractEdge{T}
     node1::Node{T}
     node2::Node{T}
-    weight::float
+    weight::Float64
 end
 
 show_node1(edge::AbstractEdge) = edge.node1

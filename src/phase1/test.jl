@@ -4,7 +4,6 @@ include("../phase1/node.jl")
 include("../phase1/edge.jl")
 include("../phase1/graph.jl")
 include("../phase1/read_stsp.jl")
-include("../phase1/kruskal.jl")
 
 """ Exemple de graphe du cours"""
 
@@ -77,5 +76,8 @@ end
     @test c2 == 2
     @test l1 == 1
     @test l2 == 2
+
+    used_edges, weight = kruskal(graph)
+    @test weight == 37
 
 end
