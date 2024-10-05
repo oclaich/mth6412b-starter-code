@@ -2,6 +2,9 @@ include("graph.jl")
 include("node.jl")
 include("edge.jl")
 include("read_stsp.jl")
+include("connexe.jl")
+include("kruskal.jl")
+
 
 
 function main(filename::String)
@@ -12,3 +15,5 @@ function main(filename::String)
 
     println("Graph ",name, " created.")
 end
+
+
