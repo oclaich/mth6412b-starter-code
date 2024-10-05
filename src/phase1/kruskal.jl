@@ -1,10 +1,8 @@
 import Base.show
 include("connexe.jl")
 
-
-"""Fonction pour check si deux noeuds sont dans la même composante connexe.
-Elle va renvoyer l'indice de la composante connexe dans laquelle se trouvent les noeuds au sein d'une liste de composantes connexes. """
-function check_comp_connexe(comp_connexes::CompConnexe{T}[],node1::Node{T},node2::Node{T}) where {T}
+"""Fonction pour check si deux noeuds sont dans la même composante connexe. Elle va renvoyer l'indice de la composante connexe dans laquelle se trouvent les noeuds au sein d'une liste de composantes connexes. """
+function check_comp_connexe(comp_connexes::Vector{CompConnexe{T}},node1::Node{T},node2::Node{T}) where {T}
     c1=0
     c2=0
     l1=0

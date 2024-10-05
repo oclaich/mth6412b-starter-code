@@ -19,7 +19,7 @@ node7=Node("G",1)
 node8=Node("H",1)
 node9=Node("I",1)
 
-nodes=Node[node1,node2,node3,node4,node5,node6,node7,node8,node9]
+Nodes=Node[node1,node2,node3,node4,node5,node6,node7,node8,node9]
 
 """ Création des arêtes """
 
@@ -42,7 +42,7 @@ edges = Edge[edge1,edge2,edge3,edge4,edge5,edge6,edge7,edge8,edge9,edge10,edge11
 
 """ Création du graphe """
 
-graph=Graph("Test graph",nodes,edges)
+graph=Graph("Test graph",Nodes,edges)
 
 @testset "Tests sur les structures de graphe." begin
     @test node1.name == "A"
