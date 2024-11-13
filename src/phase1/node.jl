@@ -1,4 +1,5 @@
-import Base.show
+export Node
+export name, data, show
 
 """Type abstrait dont d'autres types de noeuds dériveront."""
 abstract type AbstractNode{T} end
@@ -15,6 +16,7 @@ Exemple:
 mutable struct Node{T} <: AbstractNode{T}
   name::String
   data::T
+  # test
 end
 
 # on présume que tous les noeuds dérivant d'AbstractNode
